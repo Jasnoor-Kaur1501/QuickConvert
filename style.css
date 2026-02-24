@@ -1,0 +1,25 @@
+body {
+  background: #0f0f0f;
+  color: white;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.container {
+  width: 400px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
