@@ -6,19 +6,35 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>Northstar</h1>
-    <p>My dev dashboard</p>
+<div class="container">
 
-    <div class="card">Projects: <span id="projects">3</span></div>
-    <div class="card">Applications: <span id="apps">5</span></div>
-    <div class="card">Skills improving: <span id="skills">4</span></div>
+  <h1>Northstar</h1>
+  <p class="subtitle">live build dashboard</p>
 
-    <button onclick="generate()">Generate Weekly Summary</button>
-
-    <div id="summary"></div>
+  <div class="stats">
+    <div class="card">
+      <h3>Projects</h3>
+      <p>14</p>
+    </div>
+    <div class="card">
+      <h3>Active</h3>
+      <p>3</p>
+    </div>
+    <div class="card">
+      <h3>This Week</h3>
+      <p>5 sessions</p>
+    </div>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <h2>Active Builds</h2>
+
+  <div class="project">
+    <span>Northstar</span>
+    <div class="bar"><div style="width:40%"></div></div>
+  </div>
+
+  <div class="project">
+    <span>ProductivityRoom</span>
+    <div class="bar"><div style="width:70%"></div></div>
+  </div>
+
