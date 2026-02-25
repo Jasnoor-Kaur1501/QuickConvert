@@ -8,4 +8,7 @@ function generate() {
   document.getElementById("summary").innerText =
     "This week focused on " + text + ". Progress steady.";
 }
-
+window.onload = () => {
+  const saved = localStorage.getItem("week");
+  if (saved) document.getElementById("log").value = saved;
+};
