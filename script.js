@@ -1,14 +1,9 @@
-function save() {
-  const text = document.getElementById("log").value;
-  localStorage.setItem("week", text);
-}
+function analyze() {
+  const text = document.getElementById("input").value.toLowerCase();
+  const result = document.getElementById("result");
 
-function generate() {
-  const text = localStorage.getItem("week") || "built and refined projects";
-  document.getElementById("summary").innerText =
-    "This week focused on " + text + ". Progress steady.";
-}
-window.onload = () => {
-  const saved = localStorage.getItem("week");
-  if (saved) document.getElementById("log").value = saved;
-};
+  if (!text) {
+    result.innerText = "You didn't even type anything. Suspicious.";
+    return;
+  }
+
