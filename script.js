@@ -19,3 +19,7 @@ function focusMode() {
   `;
 }
 
+function resetMode() {
+  document.querySelector(".container").classList.remove("fade");
+  document.getElementById("focusView").classList.add("hidden");
+}
