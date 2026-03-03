@@ -35,3 +35,16 @@ button {
   margin-right: 10px;
 }
 
+#focusView {
+  margin-top: 50px;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade {
+  opacity: 0.2;
+}
