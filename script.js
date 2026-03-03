@@ -1,23 +1,21 @@
-async function analyze() {
-  const input = document.getElementById("input").value.toLowerCase();
-  const result = document.getElementById("result");
+function focusMode() {
+  const goal = document.getElementById("goal").value;
+  const distractions = document.getElementById("distractions").value.split("\n");
+  const focusView = document.getElementById("focusView");
 
-  if (!input) {
-    result.innerText = "No goal detected.";
-    return;
-  }
+  if (!goal) return;
 
-  let score = Math.floor(Math.random() * 60) + 30;
+  document.querySelector(".container").classList.add("fade");
 
-  if (input.includes("everyday")) score -= 20;
-  if (input.includes("5am")) score -= 15;
-
-  score = Math.max(5, Math.min(score, 95));
-
-  const response = await fetch("responses.json");
-  const data = await response.json();
-
-  const match = data.find(r => score >= r.min && score <= r.max);
-
-  result.innerText = "Believability: " + score + "% — " + match.text;
+  focusView.classList.remove("hidden");
+  focusView.innerHTML = `
+    ⭐ NORTH STAR ⭐
+    <br><br>
+    ${goal}
+    <br><br>
+    <small>Ignore:</small>
+    <br>
+    ${distractions.filter(d => d).map(d => "• " + d).join("<br>")}
+  `;
 }
+
