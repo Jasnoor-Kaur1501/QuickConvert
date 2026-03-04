@@ -1,13 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConvert - Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>QuickConvert</h1>
+                <p>Simple, precise unit conversions.</p>
+            </header>
+            
+            <div class="tabs">
+                <button class="tab active" data-type="length">Length</button>
+                <button class="tab" data-type="weight">Weight</button>
+                <button class="tab" data-type="temperature">Temperature</button>
+            </div>
 
+            <div class="content">
+                <div class="input-section">
+                    <label>Amount</label>
+                    <input type="number" id="inputValue" value="1" step="any">
+                </div>
+
+                <div class="converter-grid">
+                    <div class="select-group">
+                        <label>From</label>
+                        <select id="fromUnit"></select>
+                    </div>
+                    <div class="swap-icon">⇄</div>
+                    <div class="select-group">
+                        <label>To</label>
+                        <select id="toUnit"></select>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <label>Result</label>
+                    <div class="result-container">
+                        <span id="resultValue">1.0000</span>
+                        <span id="resultUnit" class="unit-label">m</span>
+                        <button id="copyBtn" title="Copy result">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
