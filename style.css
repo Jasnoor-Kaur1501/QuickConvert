@@ -152,12 +152,22 @@ label {
 
 input {
     width: 100%;
-    font-size: 32px;
+
+    font-size: 34px;
     font-weight: 300;
+
     border: none;
     background: transparent;
+
     outline: none;
+
     color: var(--text);
+
+    transition: transform .2s;
+}
+
+input:focus{
+    transform: scale(1.02);
 }
 
 .converter-grid {
