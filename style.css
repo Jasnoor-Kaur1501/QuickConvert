@@ -88,18 +88,39 @@ header p {
     background: none;
     border: none;
     padding: 12px 0;
+
     font-size: 14px;
     font-weight: 500;
+
     color: var(--muted);
+
     cursor: pointer;
     position: relative;
-    transition: color 0.2s;
+
+    transition: color .2s, transform .15s;
+}
+
+.tab:hover{
+    transform: translateY(-1px);
 }
 
 .tab.active {
-    color: var(--text);
+    color: var(--accent);
 }
 
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background: var(--accent);
+
+    border-radius: 2px;
+}
 .tab.active::after {
     content: '';
     position: absolute;
