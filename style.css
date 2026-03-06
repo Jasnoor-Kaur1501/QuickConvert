@@ -20,11 +20,13 @@
 
 body {
     font-family: var(--font-sans);
-    background-color: var(--bg);
+    background: var(--bg);
     color: var(--text);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     min-height: 100vh;
     padding: 20px;
 }
